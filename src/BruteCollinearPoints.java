@@ -11,8 +11,8 @@ public class BruteCollinearPoints {
         Point[] pointsCopy = points.clone();
 
         if (pointsCopy == null) throw new IllegalArgumentException("null input");
-        checkForDuplicates(pointsCopy);
         checkForNulls(pointsCopy);
+        checkForDuplicates(pointsCopy);
 
         segs = new ArrayList<>();
         Arrays.sort(pointsCopy);

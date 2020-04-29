@@ -10,8 +10,8 @@ public class FastCollinearPoints {
     public FastCollinearPoints(Point[] points) {
         Point[] pointsCopy = points.clone();
         if (points == null) throw new IllegalArgumentException("null input");
-        checkForDuplicates(points);
         checkForNulls(points);
+        checkForDuplicates(points);
 
         Arrays.sort(pointsCopy);
         this.segs = new ArrayList<>();
